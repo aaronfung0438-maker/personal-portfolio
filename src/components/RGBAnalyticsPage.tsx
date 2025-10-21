@@ -13,7 +13,7 @@ interface RGBAnalyticsPageProps {
 export function RGBAnalyticsPage({ onBack }: RGBAnalyticsPageProps) {
   const handleDownloadPPT = () => {
     const link = document.createElement('a');
-    link.href = '/RGB_Analytics_learn_more.pptx';
+    link.href = `${import.meta.env.BASE_URL}RGB_learn_more.pptx`;
     link.download = 'RGB_Production_Line_Analytics.pptx';
     document.body.appendChild(link);
     link.click();
@@ -78,19 +78,19 @@ export function RGBAnalyticsPage({ onBack }: RGBAnalyticsPageProps) {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-wrap gap-3 justify-center"
             >
-              <Badge className="bg-white hover:bg-white/90 px-4 py-2 text-sm" style={{color: '#10b981'}}>
+              <Badge className="bg-white text-yellow-600 hover:bg-white/90 px-4 py-2 text-sm">
                 Python
               </Badge>
-              <Badge className="bg-white hover:bg-white/90 px-4 py-2 text-sm" style={{color: '#10b981'}}>
+              <Badge className="bg-white text-yellow-600 hover:bg-white/90 px-4 py-2 text-sm">
                 Pandas
               </Badge>
-              <Badge className="bg-white hover:bg-white/90 px-4 py-2 text-sm" style={{color: '#10b981'}}>
+              <Badge className="bg-white text-yellow-600 hover:bg-white/90 px-4 py-2 text-sm">
                 Scikit-learn
               </Badge>
-              <Badge className="bg-white hover:bg-white/90 px-4 py-2 text-sm" style={{color: '#10b981'}}>
+              <Badge className="bg-white text-yellow-600 hover:bg-white/90 px-4 py-2 text-sm">
                 LightGBM
               </Badge>
-              <Badge className="bg-white hover:bg-white/90 px-4 py-2 text-sm" style={{color: '#10b981'}}>
+              <Badge className="bg-white text-yellow-600 hover:bg-white/90 px-4 py-2 text-sm">
                 Statistical Analysis
               </Badge>
             </motion.div>
@@ -107,12 +107,12 @@ export function RGBAnalyticsPage({ onBack }: RGBAnalyticsPageProps) {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-3xl mx-auto"
           >
-            <Card className="border-2 border-emerald-400 shadow-lg">
+            <Card className="border-2 border-yellow-200 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-emerald-400 rounded-full flex items-center justify-center">
-                      <Download size={32} className="text-white" />
+                    <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                      <Download size={32} className="text-yellow-600" />
                     </div>
                   </div>
                   <div className="flex-grow text-center md:text-left">
@@ -130,7 +130,7 @@ export function RGBAnalyticsPage({ onBack }: RGBAnalyticsPageProps) {
                       <Button
                         onClick={handleDownloadPPT}
                         size="lg"
-                        className="bg-emerald-500 hover:bg-emerald-400 gap-2"
+                        className="bg-yellow-600 hover:bg-yellow-700 gap-2"
                       >
                         <Download size={20} />
                         Download PPT
@@ -215,7 +215,7 @@ export function RGBAnalyticsPage({ onBack }: RGBAnalyticsPageProps) {
                     <CardContent className="p-6">
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
-                          <CheckCircle2 style={{color: '#10b981'}} size={24} />
+                          <CheckCircle2 className="text-yellow-600" size={24} />
                         </div>
                         <div>
                           <h3 className="text-lg mb-2">{feature.title}</h3>
@@ -321,7 +321,7 @@ export function RGBAnalyticsPage({ onBack }: RGBAnalyticsPageProps) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
-                  <Card className="h-full hover:shadow-lg transition-shadow border-l-4" style={{borderLeftColor: '#10b981'}}>
+                  <Card className="h-full hover:shadow-lg transition-shadow border-l-4 border-l-yellow-600">
                     <CardContent className="p-6">
                       <h3 className="text-lg mb-2">{func.title}</h3>
                       <p className="text-gray-600 text-sm">{func.description}</p>

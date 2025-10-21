@@ -13,7 +13,7 @@ interface ChemicalCompliancePageProps {
 export function ChemicalCompliancePage({ onBack }: ChemicalCompliancePageProps) {
   const handleDownloadPPT = () => {
     const link = document.createElement('a');
-    link.href = '/IMDS_learn_more.pptx';
+    link.href = `${import.meta.env.BASE_URL}IMDS_learn_more.pptx`;
     link.download = 'IMDS_Chemical_Compliance_Checker.pptx';
     document.body.appendChild(link);
     link.click();
@@ -104,12 +104,12 @@ export function ChemicalCompliancePage({ onBack }: ChemicalCompliancePageProps) 
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-3xl mx-auto"
           >
-            <Card className="border-2 border-purple-400 shadow-lg">
+            <Card className="border-2 border-indigo-200 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center">
-                      <Download size={32} className="text-white" />
+                    <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center">
+                      <Download size={32} className="text-indigo-600" />
                     </div>
                   </div>
                   <div className="flex-grow text-center md:text-left">
@@ -127,7 +127,7 @@ export function ChemicalCompliancePage({ onBack }: ChemicalCompliancePageProps) 
                       <Button
                         onClick={handleDownloadPPT}
                         size="lg"
-                        className="bg-purple-500 hover:bg-purple-400 gap-2"
+                        className="bg-indigo-600 hover:bg-indigo-700 gap-2"
                       >
                         <Download size={20} />
                         Download PPT

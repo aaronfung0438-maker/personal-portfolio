@@ -44,7 +44,7 @@ const workingExperiences = [
 
 const volunteerExperiences = [
   {
-    title: 'OUTSTANDING SOLUTIONS AWARD: Student Category\nEMAHK Waste Challenge: Innovate to Eliminate',
+    title: 'OUTSTANDING SOLUTIONS AWARD: Student Category\n\nEMAHK Waste Challenge: Innovate to Eliminate',
     company: 'The Environmental Management Association of Hong Kong Limited',
     period: '02/2025',
     description: 'Participated in waste reduction innovation challenge for Great Eagle Holdings Limited.',

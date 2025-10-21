@@ -13,7 +13,7 @@ interface OIRSystemPageProps {
 export function OIRSystemPage({ onBack }: OIRSystemPageProps) {
   const handleDownloadPPT = () => {
     const link = document.createElement('a');
-    link.href = '/OIR_learn_more.pptx';
+    link.href = `${import.meta.env.BASE_URL}OIR_learn_more.pptx`;
     link.download = 'OIR_System_Presentation.pptx';
     document.body.appendChild(link);
     link.click();

@@ -3,9 +3,9 @@
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
 
-  export default defineConfig({
-    plugins: [react()],
-    base: '/personal-portfolio/',
+export default defineConfig({
+  plugins: [react()],
+  base: process.env.NODE_ENV === 'production' ? '/personal-portfolio/' : '/',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {

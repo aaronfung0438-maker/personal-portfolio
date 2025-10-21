@@ -6,7 +6,7 @@ import { Card, CardContent } from './ui/card';
 export function Resume() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/CV_Aaron Fung.pdf';
+    link.href = `${import.meta.env.BASE_URL}CV_Aaron Fung.pdf`;
     link.download = 'CV_Aaron_Fung.pdf';
     document.body.appendChild(link);
     link.click();

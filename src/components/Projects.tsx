@@ -214,6 +214,24 @@ export function Projects({ projectImages, onNavigateToOIR, onNavigateToChemicalC
     }
   };
 
+  const handleCodeClick = (index: number) => {
+    if (index === 0) {
+      // OIR System - GitHub
+      window.open('https://github.com/aaronfung0438-maker/OIR_demo', '_blank');
+    } else if (index === 1) {
+      // Chemical Compliance - GitHub
+      window.open('https://github.com/aaronfung0438-maker/CASMatcher_v4.1.1', '_blank');
+    } else if (index === 3) {
+      // RGB Analytics - Download Jupyter Notebook
+      const link = document.createElement('a');
+      link.href = `${import.meta.env.BASE_URL}RGB_data_analysis.ipynb`;
+      link.download = 'RGB_data_analysis.ipynb';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -329,7 +347,12 @@ export function Projects({ projectImages, onNavigateToOIR, onNavigateToChemicalC
                         whileTap={{ scale: 0.95 }}
                         className="flex-1"
                       >
-                        <Button variant="outline" size="sm" className="w-full">
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full"
+                          onClick={() => handleCodeClick(originalIndex)}
+                        >
                           <Github size={16} className="mr-1" />
                           Code
                         </Button>

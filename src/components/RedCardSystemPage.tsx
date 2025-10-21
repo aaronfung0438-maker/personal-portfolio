@@ -13,7 +13,7 @@ interface RedCardSystemPageProps {
 export function RedCardSystemPage({ onBack }: RedCardSystemPageProps) {
   const handleDownloadPPT = () => {
     const link = document.createElement('a');
-    link.href = '/RedCard_learn_more.pptx';
+    link.href = `${import.meta.env.BASE_URL}Red Card System_learn_more.pptx`;
     link.download = 'Red_Card_System_Presentation.pptx';
     document.body.appendChild(link);
     link.click();
@@ -104,12 +104,12 @@ export function RedCardSystemPage({ onBack }: RedCardSystemPageProps) {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-3xl mx-auto"
           >
-            <Card className="border-2 border-pink-400 shadow-lg">
+            <Card className="border-2 border-pink-200 shadow-lg">
               <CardContent className="p-8">
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center">
-                      <Download size={32} className="text-white" />
+                    <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center">
+                      <Download size={32} className="text-pink-600" />
                     </div>
                   </div>
                   <div className="flex-grow text-center md:text-left">
@@ -127,7 +127,7 @@ export function RedCardSystemPage({ onBack }: RedCardSystemPageProps) {
                       <Button
                         onClick={handleDownloadPPT}
                         size="lg"
-                        className="bg-pink-500 hover:bg-pink-400 gap-2"
+                        className="bg-pink-600 hover:bg-pink-700 gap-2"
                       >
                         <Download size={20} />
                         Download PPT
